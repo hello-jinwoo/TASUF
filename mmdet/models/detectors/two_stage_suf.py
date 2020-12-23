@@ -95,12 +95,12 @@ class TwoStageDetectorSUF(BaseDetector, RPNTestMixin,
                       gt_masks=None,
                       proposals=None):
 
-        # Random number of ref_x will be given
+        # Random number of reference images will be given for training.
         # Shape: (ref_img_n, B, ...)
         num_ref = len(ref_img) - 1
         ref_img_list = ref_img 
         ref_bboxes_list = ref_bboxes 
-        gt_pids_list = gt_pids # Extracted from the global set of gt_ids
+        gt_pids_list = gt_pids # It is extracted from the global set of gt_ids
 
         x = self.extract_feat(img)
 
@@ -181,9 +181,7 @@ class TwoStageDetectorSUF(BaseDetector, RPNTestMixin,
 
             loss_match = self.track_head.loss(match_score,
                                               ids, id_weights)
-            # # [JW]
-            # if loss_match['loss_match'] == 0.0:
-            #     loss_match['loss_match'] = torch.tensor([0.], device=torch.cuda.current_device())
+
             losses.update(loss_match)
             
         # mask head forward and loss
@@ -240,8 +238,8 @@ class TwoStageDetectorSUF(BaseDetector, RPNTestMixin,
         det_rois = bbox2roi([res_det_bboxes])
         det_roi_feats = self.bbox_roi_extractor(
             x[:self.bbox_roi_extractor.num_inputs], det_rois)
-        # recompute bbox match feature
         
+        # recompute bbox match feature
         if is_first or (not is_first and self.prev_bboxes is None):
             det_obj_ids = np.arange(det_bboxes.size(0))
             # save bbox and features for later matching
@@ -253,7 +251,7 @@ class TwoStageDetectorSUF(BaseDetector, RPNTestMixin,
             assert self.prev_roi_feats is not None
             # only support one image at a time
             bbox_img_n = [det_bboxes.size(0)]
-            prev_bbox_img_n = [self.prev_roi_feats.size(0)] # #objects
+            prev_bbox_img_n = [self.prev_roi_feats.size(0)] # number of objects (#objects)
             match_score = self.track_head.forward_test(det_roi_feats, self.prev_roi_feats,
                                       bbox_img_n, prev_bbox_img_n)[0]
             match_logprob = torch.nn.functional.log_softmax(match_score, dim=1)
@@ -266,7 +264,8 @@ class TwoStageDetectorSUF(BaseDetector, RPNTestMixin,
                 label_delta,
                 add_bbox_dummy=True)
             match_likelihood, match_ids = torch.max(comp_scores, dim =1)
-            # translate match_ids to det_obj_ids, assign new id to new objects
+            
+            # translate match_ids to det_obj_ids and assign new id to new objects
             # update tracking features/bboxes of exisiting object, 
             # add tracking features/bboxes of new object
             match_ids = match_ids.cpu().numpy().astype(np.int32)
