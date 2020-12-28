@@ -33,11 +33,11 @@ We appreciate their great achievements on Video Instance Segmentation (VIS) task
 
 Details on this work can be found in this [paper](https://drive.google.com/file/d/1yjkmYV6KcsS7O5pgsjNckMWmyKdLdosY/view?usp=sharing).
   
-In this work, we performed a research to enhance the baseline model (MaskTrackRCNN) for Video Instance Segmentation (VIS) task. VIS extends the image instance segmentation task from the image domain to the video domain. The problem aims at **simultaneous detection, segmentation and tracking** of object instances in videos.
+In this work, we performed a research to enhance the baseline model (MaskTrackRCNN) for Video Instance Segmentation (VIS) task. VIS extends the instance segmentation task from the image domain to the video domain. The problem aims at **simultaneous detection, segmentation and tracking** of object instances in videos.
 YouTubeVIS, a new dataset tailored for this task is collected based on the current largest video object segmentation dataset [YouTubeVOS](youtube-vos.org). Sample annotations of a video clip can be seen below.
 <img src='doc/sample_gt.png'>
-We proposed a model for VIS, called SUF, which is an improved version of MaskTrackRCNN with enhanced tracking algorithm. The distinction in the tracking algorithm is an utilization of LSTM. In contrast to MaskTrackRCNN, SUF sequentially updates the features of previously detected objects through a video. An overview of the algorithm is shown below.
-<img src='doc/framework_suf.png'>
+We proposed a model for VIS, called TASUF (Tracking Algorithm using Sequentially Updated Features), which is an improved version of MaskTrackRCNN with enhanced tracking algorithm. The distinction of our model in the tracking algorithm is an utilization of LSTM to equalize the way of train and inference. In contrast to MaskTrackRCNN, TASUF sequentially updates the features of previously detected objects through a video. An overview of the algorithm is shown below.
+<img src='doc/framework_tasuf.png'>
 ## Installation
 This repo is built based on [mmdetection](https://github.com/open-mmlab/mmdetection) commit hash `f3a939f`. Please refer to [INSTALL.md](INSTALL.md) to install the library.
 You also need to install a customized [COCO API](https://github.com/youtubevos/cocoapi) for YouTubeVIS dataset.
