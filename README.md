@@ -1,10 +1,7 @@
 # MaskTrackRCNN for video instance segmentation
 
-## Introduction
-
-Details on the research can be found in this [paper](https://drive.google.com/file/d/1yjkmYV6KcsS7O5pgsjNckMWmyKdLdosY/view?usp=sharing)
-
-This repo serves as the official code release of the MaskTrackRCNN model for video instance segmentation described in the tech report:
+## Acknowledgements
+We acknowledge that this work hugely adopted the work done by [Linjie Yang *et al.*](https://arxiv.org/abs/1905.04804). The repo at this [link](https://github.com/youtubevos/MaskTrackRCNN) serves as the official code release of the MaskTrackRCNN model for Video Instance Segmentation described in the tech report:
 ```
 @article{ Yang2019vis,
   author = {Linjie Yang and Yuchen Fan and Ning Xu},  
@@ -15,6 +12,11 @@ This repo serves as the official code release of the MaskTrackRCNN model for vid
   url = {https://arxiv.org/abs/1905.04804}
 }
 ```
+We appreciate their great achievements on Video Instance Segmentation (VIS) task.
+
+## Introduction
+
+Details on this work can be found in this [paper](https://drive.google.com/file/d/1yjkmYV6KcsS7O5pgsjNckMWmyKdLdosY/view?usp=sharing).
   
 In this work, we performed a research to enhance the baseline model (MaskTrackRCNN) for Video Instance Segmentation (VIS) task. VIS extends the image instance segmentation task from the image domain to the video domain. The problem aims at **simultaneous detection, segmentation and tracking** of object instances in videos.
 YouTubeVIS, a new dataset tailored for this task is collected based on the current largest video object segmentation dataset [YouTubeVOS](youtube-vos.org). Sample annotations of a video clip can be seen below.
