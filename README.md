@@ -1,6 +1,9 @@
 # MaskTrackRCNN for video instance segmentation
 
 ## Introduction
+
+Details on the research can be found in this [paper](https://drive.google.com/file/d/1yjkmYV6KcsS7O5pgsjNckMWmyKdLdosY/view?usp=sharing)
+
 This repo serves as the official code release of the MaskTrackRCNN model for video instance segmentation described in the tech report:
 ```
 @article{ Yang2019vis,
@@ -12,10 +15,11 @@ This repo serves as the official code release of the MaskTrackRCNN model for vid
   url = {https://arxiv.org/abs/1905.04804}
 }
 ```
-In this work, a new task video instance segmentation is presented. Video instance segmentation extends the image instance segmentation task from the image domain to the video domain. The new problem aims at **simultaneous detection, segmentation and tracking** of object instances in videos.
+  
+In this work, we performed a research to enhance the baseline model (MaskTrackRCNN) for Video Instance Segmentation (VIS) task. VIS extends the image instance segmentation task from the image domain to the video domain. The problem aims at **simultaneous detection, segmentation and tracking** of object instances in videos.
 YouTubeVIS, a new dataset tailored for this task is collected based on the current largest video object segmentation dataset [YouTubeVOS](youtube-vos.org). Sample annotations of a video clip can be seen below.
 <img src='doc/sample_gt.png'>
-We also proposed an algorithm to jointly detect, segment, and track object instances in a video, named MaskTrackRCNN.  A tracking head is added to the original MaskRCNN model to match objects across frames. An overview of the algorithm is shown below.
+We proposed a model for VIS, called SUF, which is an improved version of MaskTrackRCNN with enhanced tracking algorithm. The distinction in the tracking algorithm is an utilization of LSTM. In contrast to MaskTrackRCNN, SUF sequentially updates the features of previously detected objects through a video. An overview of the algorithm is shown below.
 <img src='doc/framework_suf.png'>
 ## Installation
 This repo is built based on [mmdetection](https://github.com/open-mmlab/mmdetection) commit hash `f3a939f`. Please refer to [INSTALL.md](INSTALL.md) to install the library.
@@ -50,8 +54,8 @@ mmdetection
 │   │   ├── instances_val_sub.json
 ```
 
-3. Run `python3 tools/train.py configs/masktrack_rcnn_r50_fpn_1x_youtubevos.py` to train the model.
-For reference to arguments such as learning rate and model parameters, please refer to `configs/masktrack_rcnn_r50_fpn_1x_youtubevos.py`
+3. Run `python3 tools/train.py configs/masktrack_rcnn_r50_fpn_1x_youtubevos_suf.py` to train the model.
+For reference to arguments such as learning rate and model parameters, please refer to `configs/masktrack_rcnn_r50_fpn_1x_youtubevos_suf.py`
 
 ### Evaluation
 
