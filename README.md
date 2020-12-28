@@ -16,7 +16,7 @@ In this work, a new task video instance segmentation is presented. Video instanc
 YouTubeVIS, a new dataset tailored for this task is collected based on the current largest video object segmentation dataset [YouTubeVOS](youtube-vos.org). Sample annotations of a video clip can be seen below.
 <img src='doc/sample_gt.png'>
 We also proposed an algorithm to jointly detect, segment, and track object instances in a video, named MaskTrackRCNN.  A tracking head is added to the original MaskRCNN model to match objects across frames. An overview of the algorithm is shown below.
-<img src='doc/framework.png'>
+<img src='doc/framework_suf.png'>
 ## Installation
 This repo is built based on [mmdetection](https://github.com/open-mmlab/mmdetection) commit hash `f3a939f`. Please refer to [INSTALL.md](INSTALL.md) to install the library.
 You also need to install a customized [COCO API](https://github.com/youtubevos/cocoapi) for YouTubeVIS dataset.
@@ -55,7 +55,7 @@ For reference to arguments such as learning rate and model parameters, please re
 
 ### Evaluation
 
-Our pretrained model is available for download at [Google Drive](https://drive.google.com/file/d/1L4R2vwlXYzW0CU7wbBCNGKVLmog1Sz2R/view?usp=sharing).
+Our pretrained model is available for download at [Google Drive](https://drive.google.com/file/d/10bsjO-WP2GAWQC7uPP6Gk0n2rUYLexfn/view?usp=sharing).
 Run the following command to evaluate the model on YouTubeVIS.
 ```
 python3 tools/test_video.py configs/masktrack_rcnn_r50_fpn_1x_youtubevos.py [MODEL_PATH] --out [OUTPUT_PATH] --eval segm
