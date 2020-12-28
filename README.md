@@ -1,7 +1,7 @@
 # MaskTrackRCNN for video instance segmentation
 
 ## Acknowledgements
-We acknowledge that this work hugely adopted the work done by [Linjie Yang *et al.*](https://arxiv.org/abs/1905.04804). The repo at this [link](https://github.com/youtubevos/MaskTrackRCNN) serves as the official code release of the MaskTrackRCNN model for Video Instance Segmentation described in the tech report:
+We acquired huge benefits from the work done by [Linjie Yang *et al.*](https://arxiv.org/abs/1905.04804). The repo at this [link](https://github.com/youtubevos/MaskTrackRCNN) serves as the official code release of the MaskTrackRCNN model for Video Instance Segmentation described in the tech report:
 ```
 @article{ Yang2019vis,
   author = {Linjie Yang and Yuchen Fan and Ning Xu},  
