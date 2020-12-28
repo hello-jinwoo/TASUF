@@ -2,16 +2,16 @@
 
 <table>
     <tr>
-        <td ><center><img src=“doc/base_dog_1_single.gif" height="180"> </center></td>
-        <td ><center><img src=“doc/base_horse_multi.gif" height="180"> </center></td>
-        <td ><center><img src=“doc/base_ski_multi.gif" height="180"> </center></td>
+        <td ><center><img src="doc/base_dog_1_single.gif" height="180"> </center></td>
+        <td ><center><img src="doc/base_horse_multi.gif" height="180"> </center></td>
+        <td ><center><img src="doc/base_ski_multi.gif" height="180"> </center></td>
     </tr>
 </table>
 <table>
     <tr>
-        <td ><center><img src=“doc/ours_dog_1_single.gif" height="180"> </center></td>
-        <td ><center><img src=“doc/ours_horse_multi.gif" height="180"> </center></td>
-        <td ><center><img src=“doc/ours_ski_multi.gif" height="180"> </center></td>
+        <td ><center><img src="doc/ours_dog_1_single.gif" height="180"> </center></td>
+        <td ><center><img src="doc/ours_horse_multi.gif" height="180"> </center></td>
+        <td ><center><img src="doc/ours_ski_multi.gif" height="180"> </center></td>
     </tr>
 </table>
 
