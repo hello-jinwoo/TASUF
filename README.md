@@ -1,4 +1,19 @@
-# MaskTrackRCNN for video instance segmentation
+# Tracking Algorithm using Sequentially Updated Features (TASUF)
+
+<table>
+    <tr>
+        <td ><center><img src=“doc/base_dog_1_single.gif" height="180"> </center></td>
+        <td ><center><img src=“doc/base_horse_multi.gif" height="180"> </center></td>
+        <td ><center><img src=“doc/base_ski_multi.gif" height="180"> </center></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td ><center><img src=“doc/ours_dog_1_single.gif" height="180"> </center></td>
+        <td ><center><img src=“doc/ours_horse_multi.gif" height="180"> </center></td>
+        <td ><center><img src=“doc/ours_ski_multi.gif" height="180"> </center></td>
+    </tr>
+</table>
 
 ## Acknowledgements
 We acquired huge benefits from the work done by [Linjie Yang *et al.*](https://arxiv.org/abs/1905.04804). The repo at this [link](https://github.com/youtubevos/MaskTrackRCNN) serves as the official code release of the MaskTrackRCNN model for Video Instance Segmentation described in the tech report:
