@@ -9,7 +9,7 @@ from mmdet.core import bbox2roi, bbox2result, build_assigner, build_sampler
 from mmdet.core import bbox_overlaps, bbox2result_with_id
 
 @DETECTORS.register_module
-class TwoStageDetectorSUF(BaseDetector, RPNTestMixin,
+class TwoStageDetectorTASUF(BaseDetector, RPNTestMixin,
                        MaskTestMixin):
 
     def __init__(self,
@@ -24,7 +24,7 @@ class TwoStageDetectorSUF(BaseDetector, RPNTestMixin,
                  train_cfg=None,
                  test_cfg=None,
                  pretrained=None):
-        super(TwoStageDetectorSUF, self).__init__()
+        super(TwoStageDetectorTASUF, self).__init__()
         self.backbone = builder.build_backbone(backbone)
 
         if neck is not None:
@@ -58,7 +58,7 @@ class TwoStageDetectorSUF(BaseDetector, RPNTestMixin,
         return hasattr(self, 'rpn_head') and self.rpn_head is not None
 
     def init_weights(self, pretrained=None):
-        super(TwoStageDetectorQuery, self).init_weights(pretrained)
+        super(TwoStageDetectorTASUF, self).init_weights(pretrained)
         self.backbone.init_weights(pretrained=pretrained)
         if self.with_neck:
             if isinstance(self.neck, nn.Sequential):

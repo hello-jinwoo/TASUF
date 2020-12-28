@@ -1,6 +1,6 @@
 # model settings
 model = dict(
-    type='MaskRCNNQuery',
+    type='MaskRCNNTASUF',
     pretrained='modelzoo://resnet50',
     backbone=dict(
         type='ResNet',
@@ -42,7 +42,7 @@ model = dict(
         target_stds=[0.1, 0.1, 0.2, 0.2],
         reg_class_agnostic=False),
     track_head=dict(
-        type='TrackHeadQuery',
+        type='TrackHeadTASUF',
         num_fcs=2,
         in_channels=256,
         fc_out_channels=1024,
@@ -109,7 +109,7 @@ test_cfg = dict(
         max_per_img=10,
         mask_thr_binary=0.5))
 # dataset settings
-dataset_type = 'YTVOSDatasetSeq'
+dataset_type = 'YTVOSDatasetTASUF'
 data_root = 'data/YouTubeVIS/'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)

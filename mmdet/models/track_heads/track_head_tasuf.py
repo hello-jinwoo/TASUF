@@ -9,7 +9,7 @@ from ..registry import HEADS
 
 
 @HEADS.register_module
-class TrackHeadSUF(nn.Module):
+class TrackHeadTASUF(nn.Module):
     """Tracking head, predict tracking features and match with reference objects
        Use dynamic option to deal with different number of objects in different
        images. A non-match entry is added to the reference objects with all-zero 
@@ -27,7 +27,7 @@ class TrackHeadSUF(nn.Module):
                  bbox_dummy_iou=0,
                  dynamic=True
                  ):
-        super(TrackHeadSUF, self).__init__()
+        super(TrackHeadTASUF, self).__init__()
         self.in_channels = in_channels
         self.with_avg_pool = with_avg_pool
         self.roi_feat_size = roi_feat_size

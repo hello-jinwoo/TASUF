@@ -1,9 +1,9 @@
-from .two_stage_suf import TwoStageDetectorSUF
+from .two_stage_tasuf import TwoStageDetectorTASUF
 from ..registry import DETECTORS
 
 
 @DETECTORS.register_module
-class MaskRCNNSUF(TwoStageDetectorSUF):
+class MaskRCNNTASUF(TwoStageDetectorTASUF):
 
     def __init__(self,
                  backbone,
@@ -17,7 +17,7 @@ class MaskRCNNSUF(TwoStageDetectorSUF):
                  train_cfg,
                  test_cfg,
                  pretrained=None):
-        super(MaskRCNNSUF, self).__init__(
+        super(MaskRCNNTASUF, self).__init__(
             backbone=backbone,
             neck=neck,
             rpn_head=rpn_head,

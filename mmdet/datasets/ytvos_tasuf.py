@@ -10,7 +10,7 @@ from pycocotools.ytvos import YTVOS
 from mmcv.parallel import DataContainer as DC
 from .utils import to_tensor, random_scale
 
-class YTVOSDatasetSeq(CustomDataset):
+class YTVOSDatasetTASUF(CustomDataset):
     CLASSES=('person','giant_panda','lizard','parrot','skateboard','sedan',
         'ape','dog','snake','monkey','hand','rabbit','duck','cat','cow','fish',
         'train','horse','turtle','bear','motorbike','giraffe','leopard',
@@ -194,7 +194,7 @@ class YTVOSDatasetSeq(CustomDataset):
         assert len(valid_samples) > 0
         return random.choice(valid_samples)
     
-    # sampling req sequence for SUF
+    # sampling req sequence for TASUF
     # sequence length from 1 to 8
     # sequence direction => backward or forward 
     def sample_ref_seq(self, idx):
