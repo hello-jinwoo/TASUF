@@ -1,13 +1,13 @@
 # Tracking Algorithm using Sequentially Updated Features (TASUF)
 <table>
   <tr>
-    <th scope="row">MaskTrackRCNN</th>
+    <th scope="row">Baseline<br>(MaskTrackRCNN)</th>
     <td ><center><img src="doc/base_dog_1_single.gif" height="180"> </center></td>
     <td ><center><img src="doc/base_horse_multi.gif" height="180"> </center></td>
     <td ><center><img src="doc/base_ski_multi.gif" height="180"> </center></td>
   </tr>
   <tr>
-    <th scope="row">Ours (TASUF)</th>
+    <th scope="row">Ours<br>(TASUF)</th>
     <td ><center><img src="doc/ours_dog_1_single.gif" height="180"> </center></td>
     <td ><center><img src="doc/ours_horse_multi.gif" height="180"> </center></td>
     <td ><center><img src="doc/ours_ski_multi.gif" height="180"> </center></td>
