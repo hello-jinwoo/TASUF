@@ -72,7 +72,7 @@ For reference to arguments such as learning rate and model parameters, please re
 Our pretrained model is available for download at [Google Drive](https://drive.google.com/file/d/10bsjO-WP2GAWQC7uPP6Gk0n2rUYLexfn/view?usp=sharing).
 Run the following command to evaluate the model on YouTubeVIS.
 ```
-python3 tools/test_video.py configs/masktrack_rcnn_r50_fpn_1x_youtubevos.py [MODEL_PATH] --out [OUTPUT_PATH] --eval segm
+python3 tools/test_video.py configs/masktrack_rcnn_r50_fpn_1x_youtubevos_tasuf.py [MODEL_PATH] --out [OUTPUT_PATH] --eval segm
 ```
 A json file containing the predicted result will be generated as `OUTPUT_PATH.json`. YouTubeVIS currently only allows evaluation on the codalab server. Please upload the generated result to [codalab server](https://competitions.codalab.org/competitions/20128) to see actual performances.
 
@@ -86,7 +86,7 @@ A json file containing the predicted result will be generated as `OUTPUT_PATH.js
 This project is released under the [Apache 2.0 license](LICENSE).
 
 ## Contact
-If you have any questions regarding the repo, please contact Linjie Yang (yljatthu@gmail.com) or create an issue.
+If you have any questions regarding the repo, please contact Jinwoo Kim (jinw960@yonsei.ac.kr) or Janghyuk Choi (janghyuk.choi@yonsei.ac.kr) ,or create an issue.
 
 ## Acknowledgements
 We appreciate the open source projects: [mmdetection](https://github.com/open-mmlab/mmdetection) and [MaskTrackRCNN](https://github.com/youtubevos/MaskTrackRCNN). In particular, We acquired huge benefits from the [MaskTrackRCNN](https://github.com/youtubevos/MaskTrackRCNN) by [Linjie Yang *et al.*](https://arxiv.org/abs/1905.04804).
