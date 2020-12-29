@@ -1,7 +1,7 @@
 # Tracking Algorithm using Sequentially Updated Features (TASUF)
-This is the implementation of “TASUF: Tracking Algorithm using Sequentially Updated Features”, which is our result of Software Capstone Design course, Fall 2020, in [Yonsei University](https://www.yonsei.ac.kr/en_sc/).
+This is the implementation of “[**TASUF: Tracking Algorithm using Sequentially Updated Features**](https://drive.google.com/file/d/1yjkmYV6KcsS7O5pgsjNckMWmyKdLdosY/view?usp=sharing)”, which is our result of Software Capstone Design course, Fall 2020, in [Yonsei University](https://www.yonsei.ac.kr/en_sc/).
 
-* Online two-stage method for video instance segmentation.
+* Online two-stage method for Video Instance Segmentation(VIS).
 * We set the MaskTrackRCNN as our baseline model and enhance the tracking branch to get higher score in VIS task.
 * Using LSTM, we make the train procedure same as inference procedure.
 * Separate an input vector into two vectors, input vector and query vector, during tracking steps.
@@ -22,8 +22,6 @@ This is the implementation of “TASUF: Tracking Algorithm using Sequentially Up
 </table>
 
 ## Introduction
-Details on this work can be found in this [paper](https://drive.google.com/file/d/1yjkmYV6KcsS7O5pgsjNckMWmyKdLdosY/view?usp=sharing).
-  
 In this work, we performed a research to enhance the baseline model (MaskTrackRCNN) for Video Instance Segmentation (VIS) task. VIS extends the instance segmentation task from the image domain to the video domain. The problem aims at **simultaneous detection, segmentation and tracking** of object instances in videos.
 YouTubeVIS, a new dataset tailored for this task is collected based on the current largest video object segmentation dataset [YouTubeVOS](youtube-vos.org). Sample annotations of a video clip can be seen below.
 <img src='doc/sample_gt.png'>
