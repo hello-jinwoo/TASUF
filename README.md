@@ -1,36 +1,20 @@
 # Tracking Algorithm using Sequentially Updated Features (TASUF)
-
 <table>
-    <tr>
-        <td ><center><img src="doc/base_dog_1_single.gif" height="180"> </center></td>
-        <td ><center><img src="doc/base_horse_multi.gif" height="180"> </center></td>
-        <td ><center><img src="doc/base_ski_multi.gif" height="180"> </center></td>
-    </tr>
+  <tr>
+    <th scope="row">Baseline Model</th>
+    <td ><center><img src="doc/base_dog_1_single.gif" height="180"> </center></td>
+    <td ><center><img src="doc/base_horse_multi.gif" height="180"> </center></td>
+    <td ><center><img src="doc/base_ski_multi.gif" height="180"> </center></td>
+  </tr>
+  <tr>
+    <th scope="row">Our Model</th>
+    <td ><center><img src="doc/ours_dog_1_single.gif" height="180"> </center></td>
+    <td ><center><img src="doc/ours_horse_multi.gif" height="180"> </center></td>
+    <td ><center><img src="doc/ours_ski_multi.gif" height="180"> </center></td>
+  </tr>
 </table>
-<table>
-    <tr>
-        <td ><center><img src="doc/ours_dog_1_single.gif" height="180"> </center></td>
-        <td ><center><img src="doc/ours_horse_multi.gif" height="180"> </center></td>
-        <td ><center><img src="doc/ours_ski_multi.gif" height="180"> </center></td>
-    </tr>
-</table>
-
-## Acknowledgements
-We acquired huge benefits from the work done by [Linjie Yang *et al.*](https://arxiv.org/abs/1905.04804). The repo at this [link](https://github.com/youtubevos/MaskTrackRCNN) serves as the official code release of the MaskTrackRCNN model for Video Instance Segmentation described in the tech report:
-```
-@article{ Yang2019vis,
-  author = {Linjie Yang and Yuchen Fan and Ning Xu},  
-  title = {Video instance segmentation},
-  journal = {CoRR},
-  volume = {abs/1905.04804},
-  year = {2019},
-  url = {https://arxiv.org/abs/1905.04804}
-}
-```
-We appreciate their great achievements on Video Instance Segmentation (VIS) task.
 
 ## Introduction
-
 Details on this work can be found in this [paper](https://drive.google.com/file/d/1yjkmYV6KcsS7O5pgsjNckMWmyKdLdosY/view?usp=sharing).
   
 In this work, we performed a research to enhance the baseline model (MaskTrackRCNN) for Video Instance Segmentation (VIS) task. VIS extends the instance segmentation task from the image domain to the video domain. The problem aims at **simultaneous detection, segmentation and tracking** of object instances in videos.
@@ -75,7 +59,6 @@ mmdetection
 For reference to arguments such as learning rate and model parameters, please refer to `configs/masktrack_rcnn_r50_fpn_1x_youtubevos_suf.py`
 
 ### Evaluation
-
 Our pretrained model is available for download at [Google Drive](https://drive.google.com/file/d/10bsjO-WP2GAWQC7uPP6Gk0n2rUYLexfn/view?usp=sharing).
 Run the following command to evaluate the model on YouTubeVIS.
 ```
@@ -84,8 +67,21 @@ python3 tools/test_video.py configs/masktrack_rcnn_r50_fpn_1x_youtubevos.py [MOD
 A json file containing the predicted result will be generated as `OUTPUT_PATH.json`. YouTubeVIS currently only allows evaluation on the codalab server. Please upload the generated result to [codalab server](https://competitions.codalab.org/competitions/20128) to see actual performances.
 
 ## License
-
 This project is released under the [Apache 2.0 license](LICENSE).
+
 ## Contact
 If you have any questions regarding the repo, please contact Linjie Yang (yljatthu@gmail.com) or create an issue.
 
+## Acknowledgements
+We acquired huge benefits from the work done by [Linjie Yang *et al.*](https://arxiv.org/abs/1905.04804). The repo at this [link](https://github.com/youtubevos/MaskTrackRCNN) serves as the official code release of the MaskTrackRCNN model for Video Instance Segmentation described in the tech report:
+```
+@article{ Yang2019vis,
+  author = {Linjie Yang and Yuchen Fan and Ning Xu},  
+  title = {Video instance segmentation},
+  journal = {CoRR},
+  volume = {abs/1905.04804},
+  year = {2019},
+  url = {https://arxiv.org/abs/1905.04804}
+}
+```
+We appreciate their great achievements on Video Instance Segmentation (VIS) task.
