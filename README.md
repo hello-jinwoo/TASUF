@@ -73,15 +73,4 @@ This project is released under the [Apache 2.0 license](LICENSE).
 If you have any questions regarding the repo, please contact Linjie Yang (yljatthu@gmail.com) or create an issue.
 
 ## Acknowledgements
-We acquired huge benefits from the work done by [Linjie Yang *et al.*](https://arxiv.org/abs/1905.04804). The repo at this [link](https://github.com/youtubevos/MaskTrackRCNN) serves as the official code release of the MaskTrackRCNN model for Video Instance Segmentation described in the tech report:
-```
-@article{ Yang2019vis,
-  author = {Linjie Yang and Yuchen Fan and Ning Xu},  
-  title = {Video instance segmentation},
-  journal = {CoRR},
-  volume = {abs/1905.04804},
-  year = {2019},
-  url = {https://arxiv.org/abs/1905.04804}
-}
-```
-We appreciate their great achievements on Video Instance Segmentation (VIS) task.
+We appreciate the open source projects: [mmdetection](https://github.com/open-mmlab/mmdetection) and [MaskTrackRCNN](https://github.com/youtubevos/MaskTrackRCNN)
