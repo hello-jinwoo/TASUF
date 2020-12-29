@@ -65,8 +65,8 @@ mmdetection
 │   │   ├── instances_val_sub.json
 ```
 
-3. Run `python3 tools/train.py configs/masktrack_rcnn_r50_fpn_1x_youtubevos_suf.py` to train the model.
-For reference to arguments such as learning rate and model parameters, please refer to `configs/masktrack_rcnn_r50_fpn_1x_youtubevos_suf.py`
+3. Run `python3 tools/train.py configs/masktrack_rcnn_r50_fpn_1x_youtubevos_tasuf.py` to train the model.
+For reference to arguments such as learning rate and model parameters, please refer to `configs/masktrack_rcnn_r50_fpn_1x_youtubevos_tasuf.py`
 
 ### Evaluation
 Our pretrained model is available for download at [Google Drive](https://drive.google.com/file/d/10bsjO-WP2GAWQC7uPP6Gk0n2rUYLexfn/view?usp=sharing).
@@ -80,7 +80,7 @@ A json file containing the predicted result will be generated as `OUTPUT_PATH.js
 | | backbone | iteration | val. mask AP | 
 | :---: | :---: | :---: | :---: |
 | Baseline | ResNet-50 | 1x | 30.3 |
-| Ours | ResNet-50 | 1x | 33.9 |
+| Ours | ResNet-50 | 1x | **33.9** |
 
 ## License
 This project is released under the [Apache 2.0 license](LICENSE).
