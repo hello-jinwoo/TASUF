@@ -15,7 +15,7 @@
 </table>
 
 <table>
-  <caption style="text-align:center">Baseline (MaskTrackRCNN)</caption>
+  <caption style="text-align:center">Baseline</caption>
   <tr>
     <td ><center><img src="doc/base_dog_1_single.gif" height="180"> </center></td>
     <td ><center><img src="doc/base_horse_multi.gif" height="180"> </center></td>
@@ -24,7 +24,7 @@
 </table>
   
 <table>
-  <caption style="text-align:center">Ours (TASUF)</caption>
+  <caption style="text-align:center">Ours</caption>
   <tr>
     <td ><center><img src="doc/ours_dog_1_single.gif" height="180"> </center></td>
     <td ><center><img src="doc/ours_horse_multi.gif" height="180"> </center></td>
