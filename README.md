@@ -73,4 +73,5 @@ This project is released under the [Apache 2.0 license](LICENSE).
 If you have any questions regarding the repo, please contact Linjie Yang (yljatthu@gmail.com) or create an issue.
 
 ## Acknowledgements
-We appreciate the open source projects: [mmdetection](https://github.com/open-mmlab/mmdetection) and [MaskTrackRCNN](https://github.com/youtubevos/MaskTrackRCNN)
+We appreciate the open source projects: [mmdetection](https://github.com/open-mmlab/mmdetection) and [MaskTrackRCNN](https://github.com/youtubevos/MaskTrackRCNN).
+In particular, We acquired huge benefits from the [MaskTrackRCNN](https://github.com/youtubevos/MaskTrackRCNN) done by [Linjie Yang *et al.*](https://arxiv.org/abs/1905.04804).
