@@ -1,4 +1,11 @@
 # Tracking Algorithm using Sequentially Updated Features (TASUF)
+This is the implementation of “TASUF: Tracking Algorithm using Sequentially Updated Features”, which is our result of Software Capstone Design course, Fall 2020, in Yonsei University.
+
+* Online two-stage method for video instance segmentation.
+* We set the MaskTrackRCNN as our baseline model and enhance the tracking branch to get higher score in VIS task.
+* Using LSTM, we make the train procedure same as inference procedure.
+* Separate an input vector into two vectors, input vector and query vector, during tracking steps.
+
 <table>
   <tr>
     <th scope="row">Baseline</th> 
@@ -8,24 +15,6 @@
   </tr>
   <tr>
     <th scope="row">Ours</th>
-    <td ><center><img src="doc/ours_dog_1_single.gif" height="180"> </center></td>
-    <td ><center><img src="doc/ours_horse_multi.gif" height="180"> </center></td>
-    <td ><center><img src="doc/ours_ski_multi.gif" height="180"> </center></td>
-  </tr>
-</table>
-
-<table>
-  <caption style="text-align:center">Baseline</caption>
-  <tr>
-    <td ><center><img src="doc/base_dog_1_single.gif" height="180"> </center></td>
-    <td ><center><img src="doc/base_horse_multi.gif" height="180"> </center></td>
-    <td ><center><img src="doc/base_ski_multi.gif" height="180"> </center></td>
-  </tr>
-</table>
-  
-<table>
-  <caption style="text-align:center">Ours</caption>
-  <tr>
     <td ><center><img src="doc/ours_dog_1_single.gif" height="180"> </center></td>
     <td ><center><img src="doc/ours_horse_multi.gif" height="180"> </center></td>
     <td ><center><img src="doc/ours_ski_multi.gif" height="180"> </center></td>
