@@ -1,5 +1,5 @@
 # Tracking Algorithm using Sequentially Updated Features (TASUF)
-This is the implementation of “TASUF: Tracking Algorithm using Sequentially Updated Features”, which is our result of Software Capstone Design course, Fall 2020, in Yonsei University.
+This is the implementation of “TASUF: Tracking Algorithm using Sequentially Updated Features”, which is our result of Software Capstone Design course, Fall 2020, in [Yonsei University](https://www.yonsei.ac.kr/en_sc/).
 
 * Online two-stage method for video instance segmentation.
 * We set the MaskTrackRCNN as our baseline model and enhance the tracking branch to get higher score in VIS task.
@@ -29,6 +29,7 @@ YouTubeVIS, a new dataset tailored for this task is collected based on the curre
 <img src='doc/sample_gt.png'>
 We proposed a model for VIS, called TASUF (Tracking Algorithm using Sequentially Updated Features), which is an improved version of MaskTrackRCNN with enhanced tracking algorithm. The distinction of our model in the tracking algorithm is an utilization of LSTM to equalize the way of train and inference. In contrast to MaskTrackRCNN, TASUF sequentially updates the features of previously detected objects through a video. An overview of the algorithm is shown below.
 <img src='doc/framework_tasuf.png'>
+
 ## Installation
 This repo is built based on [mmdetection](https://github.com/open-mmlab/mmdetection) commit hash `f3a939f`. Please refer to [INSTALL.md](INSTALL.md) to install the library.
 You also need to install a customized [COCO API](https://github.com/youtubevos/cocoapi) for YouTubeVIS dataset.
@@ -44,8 +45,10 @@ bash compile.sh
 pip install .
 ```
 You may also need to follow [#1](/../../issues/1) to load MSCOCO pretrained models.
+
 ## Model training and evaluation
 Our model is based on MaskRCNN-resnet50-FPN. The model is trained end-to-end on YouTubeVIS based on a MSCOCO pretrained checkpoint ([link](https://s3.ap-northeast-2.amazonaws.com/open-mmlab/mmdetection/models/mask_rcnn_r50_fpn_1x_20181010-069fa190.pth)).
+
 ### Training
 1. Download YouTubeVIS from [here](https://youtube-vos.org/dataset/vis/).
 2. Symlink the train/validation dataset to `$MMDETECTION/data` folder. Put COCO-style annotations under `$MMDETECTION/data/annotations`.
@@ -72,6 +75,12 @@ Run the following command to evaluate the model on YouTubeVIS.
 python3 tools/test_video.py configs/masktrack_rcnn_r50_fpn_1x_youtubevos.py [MODEL_PATH] --out [OUTPUT_PATH] --eval segm
 ```
 A json file containing the predicted result will be generated as `OUTPUT_PATH.json`. YouTubeVIS currently only allows evaluation on the codalab server. Please upload the generated result to [codalab server](https://competitions.codalab.org/competitions/20128) to see actual performances.
+
+### Results
+| | backbone | iteration | Val. mask AP | 
+| :---: | :---: | :---: | :---: |
+| Baseline | R50 | 1x | 30.3 |
+| Ours | R50 | 1x | 33.9 |
 
 ## License
 This project is released under the [Apache 2.0 license](LICENSE).
