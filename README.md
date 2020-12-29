@@ -77,10 +77,10 @@ python3 tools/test_video.py configs/masktrack_rcnn_r50_fpn_1x_youtubevos.py [MOD
 A json file containing the predicted result will be generated as `OUTPUT_PATH.json`. YouTubeVIS currently only allows evaluation on the codalab server. Please upload the generated result to [codalab server](https://competitions.codalab.org/competitions/20128) to see actual performances.
 
 ### Results
-| | backbone | iteration | Val. mask AP | 
+| | backbone | iteration | val. mask AP | 
 | :---: | :---: | :---: | :---: |
-| Baseline | R50 | 1x | 30.3 |
-| Ours | R50 | 1x | 33.9 |
+| Baseline | ResNet-50 | 1x | 30.3 |
+| Ours | ResNet-50 | 1x | 33.9 |
 
 ## License
 This project is released under the [Apache 2.0 license](LICENSE).
