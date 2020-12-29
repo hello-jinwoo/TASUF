@@ -14,6 +14,24 @@
   </tr>
 </table>
 
+<table>
+  <caption>Baseline (MaskTrackRCNN)</caption>
+  <tr>
+    <td ><center><img src="doc/base_dog_1_single.gif" height="180"> </center></td>
+    <td ><center><img src="doc/base_horse_multi.gif" height="180"> </center></td>
+    <td ><center><img src="doc/base_ski_multi.gif" height="180"> </center></td>
+  </tr>
+</table>
+  
+<table>
+  <caption>Ours (TASUF)</caption>
+  <tr>
+    <td ><center><img src="doc/ours_dog_1_single.gif" height="180"> </center></td>
+    <td ><center><img src="doc/ours_horse_multi.gif" height="180"> </center></td>
+    <td ><center><img src="doc/ours_ski_multi.gif" height="180"> </center></td>
+  </tr>
+</table>
+
 ## Introduction
 Details on this work can be found in this [paper](https://drive.google.com/file/d/1yjkmYV6KcsS7O5pgsjNckMWmyKdLdosY/view?usp=sharing).
   
