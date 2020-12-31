@@ -64,14 +64,14 @@ mmdetection
 │   │   ├── instances_val_sub.json
 ```
 
-3. Run `python3 tools/train.py configs/masktrack_rcnn_r50_fpn_1x_youtubevos_tasuf.py` to train the model.
-For reference to arguments such as learning rate and model parameters, please refer to `configs/masktrack_rcnn_r50_fpn_1x_youtubevos_tasuf.py`
+3. Run `python3 tools/train.py configs/TASUF/config_tasuf.py` to train the model.
+For reference to arguments such as learning rate and model parameters, please refer to `configs/TASUF/config_tasuf.py`
 
 ### Evaluation
 Our pretrained model is available for download at [Google Drive](https://drive.google.com/file/d/10bsjO-WP2GAWQC7uPP6Gk0n2rUYLexfn/view?usp=sharing).
 Run the following command to evaluate the model on YouTubeVIS.
 ```
-python3 tools/test_video.py configs/masktrack_rcnn_r50_fpn_1x_youtubevos_tasuf.py [MODEL_PATH] --out [OUTPUT_PATH] --eval segm
+python3 tools/test_video.py configs/TASUF/config_tasuf.py [MODEL_PATH] --out [OUTPUT_PATH] --eval segm
 ```
 A json file containing the predicted result will be generated as `OUTPUT_PATH.json`. YouTubeVIS currently only allows evaluation on the codalab server. Please upload the generated result to [codalab server](https://competitions.codalab.org/competitions/20128) to see actual performances.
 
