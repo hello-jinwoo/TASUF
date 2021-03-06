@@ -8,8 +8,8 @@ model = dict(
         num_stages=4,
         out_indices=(0, 1, 2, 3),
         frozen_stages=1,
-        # normalize=dict(type='GN', num_groups=1), # [JW]
-        normalize=dict(type='BN', frozen=True), # [JW]
+        # normalize=dict(type='GN', num_groups=1),
+        normalize=dict(type='BN', frozen=True),
         style='pytorch'),
     neck=dict(
         type='FPN',

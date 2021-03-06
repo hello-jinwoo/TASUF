@@ -68,7 +68,7 @@ mmdetection
 For reference to arguments such as learning rate and model parameters, please refer to `configs/TASUF/config_tasuf.py`
 
 ### Evaluation
-Our pretrained model is available for download at [Google Drive](https://drive.google.com/file/d/10bsjO-WP2GAWQC7uPP6Gk0n2rUYLexfn/view?usp=sharing).
+<!-- Our pretrained model is available for download at [Google Drive](https://drive.google.com/file/d/10bsjO-WP2GAWQC7uPP6Gk0n2rUYLexfn/view?usp=sharing). -->
 Run the following command to evaluate the model on YouTubeVIS.
 ```
 python3 tools/test_video.py configs/TASUF/config_tasuf.py [MODEL_PATH] --out [OUTPUT_PATH] --eval segm
